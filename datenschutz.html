@@ -8,6 +8,9 @@
   <meta name="author" content="Patrick Schwarzmann-Memmer">
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#f6f8fb">
+  	<link rel="icon" href="favicon.png" sizes="any">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+	<link rel="apple-touch-icon" href="favicon.png">
   <link rel="canonical" href="https://schwarzmann.tech/datenschutz.html">
   <style>
     :root {
@@ -101,7 +104,8 @@
 
     .brand-copy { display: flex; flex-direction: column; line-height: 1.1; }
     .brand-copy strong { font-size: .98rem; letter-spacing: -.02em; }
-    .brand-copy span {
+    .brand-copy .brand-accent { color: var(--primary); }
+    .brand-copy > .brand-domain {
       margin-top: 4px;
       color: var(--muted);
       font-size: .7rem;
@@ -344,7 +348,7 @@
     @media (max-width: 680px) {
       .container { width: min(calc(100% - 28px), var(--container)); }
       .brand-copy strong { font-size: .88rem; }
-      .brand-copy span { font-size: .63rem; }
+      .brand-copy > .brand-domain { font-size: .63rem; }
       .home-button span { display: none; }
       .home-button { width: 44px; padding: 0; }
       .legal-hero { padding: 68px 0 42px; }
@@ -378,15 +382,17 @@
     
 <a class="brand" href="index.html" aria-label="Schwarzmann IT-Solutions – Startseite">
   <span class="brand-mark" aria-hidden="true">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-      <path d="M7.2 6.2 12 3.4l4.8 2.8v5.6L12 14.6l-4.8-2.8V6.2Z"/>
-      <path d="m7.2 11.8 4.8 2.8 4.8-2.8M12 14.6v6"/>
-      <path d="m7.2 17.4 4.8 3.2 4.8-3.2"/>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <circle cx="6.4" cy="6.8" r="2.1"/>
+      <circle cx="17.5" cy="12" r="2.1"/>
+      <circle cx="8.4" cy="17.5" r="2.1"/>
+      <path d="M8.3 7.8 15.6 11"/>
+      <path d="M10.2 16.4 15.7 13.2"/>
     </svg>
   </span>
   <span class="brand-copy">
-    <strong>Schwarzmann IT-Solutions</strong>
-    <span>schwarzmann.tech</span>
+    <strong>Schwarzmann <span class="brand-accent">IT-Solutions</span></strong>
+    <span class="brand-domain">schwarzmann.tech</span>
   </span>
 </a>
 
